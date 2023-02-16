@@ -3,19 +3,24 @@ package desafios;
 public class Lampada {
 
     //PROPRIEDADES
-    int potencia;
-    boolean estaLigado;
+   private int potencia;
+    private boolean estaLigado;
+
+    //construtor
+    Lampada(int potencia){
+        this.potencia = potencia;
+    }
 
     //METODOS
-    void acender() {
+    public void acender() {
         estaLigado = true;
     }
 
-    void apagar() {
+   public void apagar() {
         estaLigado = false;
     }
 
-    String pegarEstado(){
+    public String pegarEstado(){
         String texto = "A potência da sua lâmpada é: "+ potencia;
         if (estaLigado){
             texto = texto + " e ela está ligada";
